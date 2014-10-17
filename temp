@@ -1,0 +1,34 @@
+module D_ff(input clk, input reset, input init_value1b, input regWrite, input decOut1b, input d, output reg q);
+
+module register32bit(input clk, input reset, input [31:0] init_value, input regWrite, input decOut1b, input [31:0] writeData,output [31:0] outBus);
+
+module mux16to1_32bit(input [31:0] in0, input [31:0] in1, input [31:0] in2, input [31:0] in3, input [31:0] in4, input
+
+module decoder4to16(input [3:0] destReg, output reg [15:0] decOut);
+
+module registerFile( input clk, input reset, input [31:0] init_reg0, input [31:0] init_reg1, input [31:0] init_reg2, input [31:0]
+
+module adder(input [31:0] in1, input [31:0] in2, output reg [31:0] adder_out);
+
+module mux2to1_4bit(input [3:0] in0, input [3:0] in1, input Sel, output reg [3:0] muxOut);
+
+module mux2to1_32bit(input [31:0] in0, input [31:0] in1, input Sel, output reg [31:0] muxOut);
+
+module mux4to1_32bit(input [31:0] in0, input [31:0] in1, input [31:0] in2, input [31:0] in3, input [1:0] Sel, output reg [31:0] muxOut);
+
+module sExt12to32bit( input [11:0] imm, output reg [31:0] sExtImm);
+
+module zExt12to32bit( input [11:0] imm, output reg [31:0] zExtImm);
+
+module zExt4to32bit( input [3:0] imm, output reg [31:0] zExtImm);
+
+module ctrlCkt(input [8:0] opcode, input [2:0] RorI, output reg regWrite, output reg regDst, output reg readC, output reg aluSrc1, 
+output reg [1:0] aluSrc2, output reg aluSrc3, output reg [3:0] aluOp, output reg [1:0] PCSrc, output reg memRead, output reg memWrite, output reg [1:0] regWriteSrc);
+
+module alu(input [31:0] aluSrc1, input [31:0] aluSrc2, input [31:0] aluSrc3, input [3:0] operation, output reg [31:0] aluResult, output reg carry);
+
+module im(input clk, input [31:0] address, output reg [31:0] opcode);
+
+module dm(input clk, input [31:0] address, input writeData, input memRead, input memWrite, output reg [31:0] data);
+
+module datapath(input clk, input reset, output [31:0] aluResult);
